@@ -1,5 +1,5 @@
-export const PHONE = "+91-9876543210";
-export const WHATSAPP = "919876543210";
+export const PHONE = "+91-9611133359";
+export const WHATSAPP = "919611133359";
 export const EMAIL = "info@coolhomesservices.com";
 export const SITE_URL = "https://www.coolhomesservices.com";
 export const COMPANY = "Cool Home Services";
