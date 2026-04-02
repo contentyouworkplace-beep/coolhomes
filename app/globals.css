@@ -900,6 +900,72 @@ footer {
   .hero-form, .inner-hero-form { max-width: 100%; min-width: unset; }
 }
 
+/* ======= LIGHT FORM (used on white backgrounds) ======= */
+.light-hero-form {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 22px;
+  width: 100%;
+}
+.light-hero-form h3 {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.light-hero-form .form-sub {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 14px;
+}
+.light-hero-form .hf-group {
+  margin-bottom: 10px;
+}
+.light-hero-form .hf-group input,
+.light-hero-form .hf-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 7px;
+  font-size: 13px;
+  background: #fff;
+  color: #333;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+.light-hero-form .hf-group input::placeholder { color: #999; }
+.light-hero-form .hf-group select { color: #333; }
+.light-hero-form .hf-group input:focus,
+.light-hero-form .hf-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.light-hero-form .btn-submit {
+  width: 100%;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.light-hero-form .btn-submit:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.light-hero-form .form-note {
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  margin-top: 6px;
+}
+
 /* ======= MOBILE MENU ======= */
 .hamburger {
   display: none;

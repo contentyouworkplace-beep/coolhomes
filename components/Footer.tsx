@@ -1,7 +1,10 @@
 import Link from "next/link";
-import { PHONE, EMAIL, WHATSAPP } from "@/lib/data";
+import { PHONE, EMAIL, WHATSAPP, KEYWORDS, AREAS } from "@/lib/data";
 
 export default function Footer() {
+  const keywordEntries = Object.entries(KEYWORDS);
+  const areaEntries = Object.entries(AREAS);
+
   return (
     <footer>
       <div className="footer-grid">
@@ -18,26 +21,6 @@ export default function Footer() {
           </p>
         </div>
         <div className="footer-col">
-          <h4>Popular Services</h4>
-          <ul>
-            <li><Link href="/keywords/ac-repair-bangalore">AC Repair</Link></li>
-            <li><Link href="/keywords/ac-service-bangalore">AC Service</Link></li>
-            <li><Link href="/keywords/ac-installation-bangalore">AC Installation</Link></li>
-            <li><Link href="/keywords/ac-gas-filling-bangalore">Gas Filling</Link></li>
-            <li><Link href="/keywords/amc-ac-bangalore">AMC Plans</Link></li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h4>Top Areas</h4>
-          <ul>
-            <li><Link href="/areas/koramangala">Koramangala</Link></li>
-            <li><Link href="/areas/indiranagar">Indiranagar</Link></li>
-            <li><Link href="/areas/whitefield">Whitefield</Link></li>
-            <li><Link href="/areas/hsr-layout">HSR Layout</Link></li>
-            <li><Link href="/areas/marathahalli">Marathahalli</Link></li>
-          </ul>
-        </div>
-        <div className="footer-col">
           <h4>Contact</h4>
           <ul>
             <li><a href={`tel:${PHONE.replace(/[^+\d]/g, "")}`}>{PHONE}</a></li>
@@ -48,6 +31,29 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+
+      <div style={{ padding: "30px 20px", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+        <h4 style={{ marginBottom: "14px" }}>All Services</h4>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+          {keywordEntries.map(([slug, kw]) => (
+            <Link key={slug} href={`/keywords/${slug}`} style={{ fontSize: "12px", opacity: 0.8 }}>
+              {kw.title}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ padding: "30px 20px", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+        <h4 style={{ marginBottom: "14px" }}>All Service Areas</h4>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+          {areaEntries.map(([slug, area]) => (
+            <Link key={slug} href={`/areas/${slug}`} style={{ fontSize: "12px", opacity: 0.8 }}>
+              {area.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <div className="footer-bottom">
         <p>&copy; 2026 Cool Home Services. All Rights Reserved. Bangalore, Karnataka</p>
       </div>

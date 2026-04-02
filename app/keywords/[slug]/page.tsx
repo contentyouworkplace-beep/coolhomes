@@ -2,7 +2,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroForm from "@/components/HeroForm";
-import { KEYWORDS, PHONE, WHATSAPP, getKeywordSlugs } from "@/lib/data";
+import SchemaMarkup from "@/components/SchemaMarkup";
+import { KEYWORDS, AREAS, PHONE, WHATSAPP, getKeywordSlugs } from "@/lib/data";
+
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   return getKeywordSlugs().map((slug) => ({ slug }));
@@ -16,11 +19,22 @@ export async function generateMetadata({
   const { slug } = await params;
   const kw = KEYWORDS[slug];
   if (!kw) return {};
+  const url = `https://www.coolhomesservices.com/keywords/${slug}`;
   return {
-    title: `${kw.title} | Cool Home Services - ${PHONE}`,
+    title: `${kw.title} | Cool Home Services`,
     description: kw.description,
-    alternates: {
-      canonical: `https://www.coolhomeservices.in/keywords/${slug}`,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${kw.title} | Cool Home Services`,
+      description: kw.description,
+      url,
+      type: "website",
+      siteName: "Cool Home Services",
+    },
+    twitter: {
+      card: "summary",
+      title: `${kw.title} | Cool Home Services`,
+      description: kw.description,
     },
   };
 }
@@ -36,8 +50,27 @@ export default async function KeywordPage({
 
   const title = kw.title;
 
+  // Related keyword slugs (up to 8, excluding current)
+  const allKeywordSlugs = Object.keys(KEYWORDS);
+  const relatedKeywords = allKeywordSlugs
+    .filter((s) => s !== slug)
+    .slice(0, 8);
+
+  // Top area slugs
+  const topAreas = Object.entries(AREAS).slice(0, 8);
+
   return (
     <>
+      <SchemaMarkup
+        breadcrumbs={[
+          { name: "Home", url: "https://www.coolhomesservices.com" },
+          { name: "Services", url: "https://www.coolhomesservices.com/services" },
+          { name: title, url: `https://www.coolhomesservices.com/keywords/${slug}` },
+        ]}
+        pageUrl={`https://www.coolhomesservices.com/keywords/${slug}`}
+        pageTitle={`${title} | Cool Home Services`}
+        pageDescription={kw.description}
+      />
       <section className="inner-hero">
         <div className="container">
           <div>
@@ -152,6 +185,26 @@ export default async function KeywordPage({
             <a href={`tel:${PHONE.replace(/[^+\d]/g,"")}`} className="btn btn-primary">📞 Call Now</a>
             <a href={`https://wa.me/${WHATSAPP}`} className="btn btn-outline">💬 WhatsApp</a>
             <Link href="/contact" className="btn btn-outline">📅 Book Online</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Linking: Related Services */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header"><h2>Related AC Services in Bangalore</h2></div>
+          <div style={{display:"flex",flexWrap:"wrap",gap:"10px",marginBottom:"30px"}}>
+            {relatedKeywords.map((s) => (
+              <Link key={s} href={`/keywords/${s}`} className="area-chip">{KEYWORDS[s].title}</Link>
+            ))}
+            <Link href="/services" className="area-chip">All Services →</Link>
+          </div>
+          <div className="section-header" style={{marginTop:"20px"}}><h2>AC Service Areas in Bangalore</h2></div>
+          <div style={{display:"flex",flexWrap:"wrap",gap:"10px"}}>
+            {topAreas.map(([s, a]) => (
+              <Link key={s} href={`/areas/${s}`} className="area-chip">{a.name}</Link>
+            ))}
+            <Link href="/areas" className="area-chip">All Areas →</Link>
           </div>
         </div>
       </section>

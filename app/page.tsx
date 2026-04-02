@@ -142,36 +142,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section style={{ background: "#fff" }}>
-        <div className="container">
-          <div className="section-header">
-            <div className="section-tag">PRICING</div>
-            <h2>Transparent &amp; Affordable Pricing</h2>
-          </div>
-          <div className="pricing-grid">
-            <div className="price-card">
-              <h3>Basic Service</h3>
-              <div className="price-amount">₹499 <span>/ visit</span></div>
-              <ul className="price-features"><li>Filter Cleaning</li><li>Indoor Unit Inspection</li><li>Cooling Check</li><li>Performance Test</li><li>Service Report</li></ul>
-              <a href={`tel:${PHONE.replace(/[^+\d]/g,"")}`} className="btn btn-primary" style={{width:"100%",justifyContent:"center"}}>Book Now</a>
-            </div>
-            <div className="price-card featured">
-              <div className="price-badge">MOST POPULAR</div>
-              <h3>Complete Service</h3>
-              <div className="price-amount">₹999 <span>/ visit</span></div>
-              <ul className="price-features"><li>Deep Cleaning</li><li>Coil &amp; Fin Cleaning</li><li>Gas Pressure Check</li><li>Electrical Check</li><li>Drain Cleaning</li><li>30-Day Warranty</li></ul>
-              <a href={`tel:${PHONE.replace(/[^+\d]/g,"")}`} className="btn btn-primary" style={{width:"100%",justifyContent:"center"}}>Book Now</a>
-            </div>
-            <div className="price-card">
-              <h3>AMC Plan</h3>
-              <div className="price-amount">₹2,999 <span>/ year</span></div>
-              <ul className="price-features"><li>4 Scheduled Services/Year</li><li>Priority Booking</li><li>Free Emergency Visits (2)</li><li>10% Discount on Parts</li><li>Annual Health Report</li></ul>
-              <a href={`tel:${PHONE.replace(/[^+\d]/g,"")}`} className="btn btn-primary" style={{width:"100%",justifyContent:"center"}}>Book Now</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="why-bg">
         <div className="container">
           <div className="section-header">
@@ -241,7 +211,7 @@ export default function HomePage() {
             <div className="contact-info">
               <div className="contact-item"><div className="contact-icon">📞</div><div><h4>CALL US</h4><p>{PHONE}</p></div></div>
               <div className="contact-item"><div className="contact-icon">💬</div><div><h4>WHATSAPP</h4><p>{PHONE}</p></div></div>
-              <div className="contact-item"><div className="contact-icon">✉️</div><div><h4>EMAIL</h4><p>info@coolhomeservices.in</p></div></div>
+              <div className="contact-item"><div className="contact-icon">✉️</div><div><h4>EMAIL</h4><p>info@coolhomesservices.com</p></div></div>
               <div className="contact-item"><div className="contact-icon">📍</div><div><h4>OFFICE</h4><p>Koramangala, Bangalore – 560034</p></div></div>
               <div className="contact-item"><div className="contact-icon">🕐</div><div><h4>WORKING HOURS</h4><p>Monday – Sunday: 8AM – 8PM</p></div></div>
             </div>

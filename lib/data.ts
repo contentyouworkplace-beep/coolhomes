@@ -1,7 +1,7 @@
 export const PHONE = "+91-9876543210";
 export const WHATSAPP = "919876543210";
-export const EMAIL = "info@coolhomeservices.in";
-export const SITE_URL = "https://www.coolhomeservices.in";
+export const EMAIL = "info@coolhomesservices.com";
+export const SITE_URL = "https://www.coolhomesservices.com";
 export const COMPANY = "Cool Home Services";
 
 export const SERVICES = [

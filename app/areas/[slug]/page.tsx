@@ -2,7 +2,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroForm from "@/components/HeroForm";
-import { AREAS, PHONE, WHATSAPP, getAreaSlugs } from "@/lib/data";
+import SchemaMarkup from "@/components/SchemaMarkup";
+import { AREAS, KEYWORDS, PHONE, WHATSAPP, getAreaSlugs } from "@/lib/data";
+
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   return getAreaSlugs().map((slug) => ({ slug }));
@@ -16,11 +19,22 @@ export async function generateMetadata({
   const { slug } = await params;
   const area = AREAS[slug];
   if (!area) return {};
+  const url = `https://www.coolhomesservices.com/areas/${slug}`;
   return {
-    title: `AC Repair in ${area.name} Bangalore | Cool Home Services`,
+    title: `AC Repair in ${area.name}, Bangalore | Cool Home Services`,
     description: area.description,
-    alternates: {
-      canonical: `https://www.coolhomeservices.in/areas/${slug}`,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `AC Repair in ${area.name}, Bangalore | Cool Home Services`,
+      description: area.description,
+      url,
+      type: "website",
+      siteName: "Cool Home Services",
+    },
+    twitter: {
+      card: "summary",
+      title: `AC Repair in ${area.name}, Bangalore | Cool Home Services`,
+      description: area.description,
     },
   };
 }
@@ -36,8 +50,26 @@ export default async function AreaPage({
 
   const name = area.name;
 
+  // Nearby areas (up to 8, excluding current)
+  const nearbyAreas = Object.entries(AREAS)
+    .filter(([s]) => s !== slug)
+    .slice(0, 8);
+
+  // Top service keywords for this area
+  const topKeywords = Object.entries(KEYWORDS).slice(0, 8);
+
   return (
     <>
+      <SchemaMarkup
+        breadcrumbs={[
+          { name: "Home", url: "https://www.coolhomesservices.com" },
+          { name: "Areas", url: "https://www.coolhomesservices.com/areas" },
+          { name: `AC Repair in ${name}`, url: `https://www.coolhomesservices.com/areas/${slug}` },
+        ]}
+        pageUrl={`https://www.coolhomesservices.com/areas/${slug}`}
+        pageTitle={`AC Repair in ${name}, Bangalore | Cool Home Services`}
+        pageDescription={area.description}
+      />
       <section className="inner-hero">
         <div className="container">
           <div>
@@ -154,6 +186,26 @@ export default async function AreaPage({
             <a href={`tel:${PHONE.replace(/[^+\d]/g,"")}`} className="btn btn-primary">📞 Call Now</a>
             <a href={`https://wa.me/${WHATSAPP}`} className="btn btn-outline">💬 WhatsApp</a>
             <Link href="/contact" className="btn btn-outline">📅 Book Online</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Linking: Nearby Areas + Services */}
+      <section className="content-section">
+        <div className="container">
+          <div className="section-header"><h2>AC Service in Nearby Areas</h2></div>
+          <div style={{display:"flex",flexWrap:"wrap",gap:"10px",marginBottom:"30px"}}>
+            {nearbyAreas.map(([s, a]) => (
+              <Link key={s} href={`/areas/${s}`} className="area-chip">{a.name}</Link>
+            ))}
+            <Link href="/areas" className="area-chip">All Areas →</Link>
+          </div>
+          <div className="section-header" style={{marginTop:"20px"}}><h2>Our AC Services in {name}</h2></div>
+          <div style={{display:"flex",flexWrap:"wrap",gap:"10px"}}>
+            {topKeywords.map(([s, kw]) => (
+              <Link key={s} href={`/keywords/${s}`} className="area-chip">{kw.title}</Link>
+            ))}
+            <Link href="/services" className="area-chip">All Services →</Link>
           </div>
         </div>
       </section>

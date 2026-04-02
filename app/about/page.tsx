@@ -44,7 +44,7 @@ export default function AboutPage() {
               <div className="info-row"><span className="label">Service Area</span><span className="value">50+ Areas in Bangalore</span></div>
               <div className="info-row"><span className="label">Working Hours</span><span className="value">Mon-Sun, 8AM-8PM</span></div>
               <div className="info-row"><span className="label">Phone</span><span className="value">{PHONE}</span></div>
-              <div className="info-row"><span className="label">Email</span><span className="value">info@coolhomeservices.in</span></div>
+              <div className="info-row"><span className="label">Email</span><span className="value">info@coolhomesservices.com</span></div>
             </div>
           </div>
         </div>

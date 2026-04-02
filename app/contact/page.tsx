@@ -50,7 +50,7 @@ export default function ContactPage() {
             </div>
             <div className="contact-form">
               <h3>Book Online – Get Free Callback</h3>
-              <HeroForm variant="inner" />
+              <HeroForm variant="light" />
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SERVICES } from "@/lib/data";
 
 interface HeroFormProps {
-  variant?: "hero" | "inner";
+  variant?: "hero" | "inner" | "light";
 }
 
 export default function HeroForm({ variant = "inner" }: HeroFormProps) {
@@ -18,7 +18,7 @@ export default function HeroForm({ variant = "inner" }: HeroFormProps) {
     (e.target as HTMLFormElement).reset();
   }
 
-  const className = variant === "hero" ? "hero-form" : "inner-hero-form";
+  const className = variant === "hero" ? "hero-form" : variant === "light" ? "light-hero-form" : "inner-hero-form";
 
   return (
     <div className={className}>
