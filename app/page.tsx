@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import HeroForm from "@/components/HeroForm";
 import { PHONE, WHATSAPP } from "@/lib/data";
 
@@ -155,6 +156,38 @@ export default function HomePage() {
           </div>
           <div style={{textAlign:"center",marginTop:"30px"}}>
             <Link href="/areas" className="btn btn-primary">View All Service Areas →</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="why-bg">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-tag">OUR WORK</div>
+            <h2>Our AC Service Gallery</h2>
+            <p>Real work done by our certified technicians across Bangalore</p>
+          </div>
+          <div className="gallery-grid">
+            {[
+              "2025-12-15 (1).jpg","2025-12-15 (2).jpg","2025-12-15 (3).jpg","2025-12-15 (4).jpg",
+              "2025-12-15 (5).jpg","2025-12-15 (6).jpg","2025-12-15 (7).jpg","2025-12-15 (8).jpg",
+              "2025-12-15 (9).jpg","2025-12-15 (10).jpg","2025-12-15 (11).jpg","2025-12-15.jpg",
+              "2026-01-17.jpg","2026-01-19 (1).jpg","2026-01-19.jpg","2026-01-20 (1).jpg",
+              "2026-01-20 (2).jpg","2026-01-20 (3).jpg","2026-01-20 (4).jpg","2026-01-20 (5).jpg",
+              "2026-01-20 (6).jpg","2026-01-20 (7).jpg","2026-01-20.jpg","2026-03-15 (1).jpg",
+              "2026-03-15.jpg","2026-03-24 (1).jpg","2026-03-24.jpg","2026-03-29.jpg",
+            ].map((img, i) => (
+              <div key={i} className="gallery-item">
+                <Image
+                  src={`/gallery/${img}`}
+                  alt={`Cool Home Services AC work ${i + 1}`}
+                  width={400}
+                  height={300}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
