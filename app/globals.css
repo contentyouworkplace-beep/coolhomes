@@ -31,12 +31,12 @@ a:hover { color: var(--accent); }
 
 /* ======= HEADER ======= */
 header {
-  background: var(--dark);
+  background: #ffffff;
   padding: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
 
 .header-top {
@@ -90,7 +90,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #d0e4f7;
+  color: #1a2a3a;
   padding: 8px 14px;
   border-radius: 6px;
   font-size: 14px;
