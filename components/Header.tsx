@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PHONE, EMAIL } from "@/lib/data";
 
@@ -19,13 +20,16 @@ export default function Header() {
         </div>
       </div>
       <div className="header-main">
-        <div className="logo">
-          <div className="logo-icon">❄️</div>
-          <div className="logo-text">
-            <h1>Cool Home Services</h1>
-            <span>AC REPAIR &amp; SERVICES BANGALORE</span>
-          </div>
-        </div>
+        <Link href="/" className="logo">
+          <Image
+            src="/coolhomes-logo.png"
+            alt="Cool Home Services Logo"
+            width={160}
+            height={52}
+            priority
+            style={{ objectFit: "contain" }}
+          />
+        </Link>
         <nav>
           <ul>
             <li><Link href="/" className={isActive("/")}>Home</Link></li>

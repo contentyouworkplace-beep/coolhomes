@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PHONE, EMAIL, WHATSAPP, KEYWORDS, AREAS } from "@/lib/data";
 
 export default function Footer() {
@@ -9,12 +10,15 @@ export default function Footer() {
     <footer>
       <div className="footer-grid">
         <div className="footer-brand">
-          <div className="logo">
-            <div className="logo-icon">❄️</div>
-            <div className="logo-text">
-              <h1>Cool Home Services</h1>
-            </div>
-          </div>
+          <Link href="/" className="logo">
+            <Image
+              src="/coolhomes-logo.png"
+              alt="Cool Home Services Logo"
+              width={160}
+              height={52}
+              style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
+            />
+          </Link>
           <p>
             Bangalore&apos;s most trusted AC repair and service company. Certified
             technicians, genuine parts, transparent pricing. Since 2014.
