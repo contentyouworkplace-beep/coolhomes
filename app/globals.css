@@ -900,6 +900,52 @@ footer {
   .hero-form, .inner-hero-form { max-width: 100%; min-width: unset; }
 }
 
+@media (max-width: 600px) {
+  /* All form variants — full width, comfortable touch targets */
+  .hero-form,
+  .inner-hero-form,
+  .light-hero-form {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  /* Stack the two-column name/phone row on mobile */
+  .hero-form .hf-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  /* Bigger touch targets for inputs */
+  .hero-form .hf-group input,
+  .hero-form .hf-group select,
+  .inner-hero-form .hf-group input,
+  .inner-hero-form .hf-group select,
+  .light-hero-form .hf-group input,
+  .light-hero-form .hf-group select {
+    padding: 13px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  /* Bigger submit button */
+  .hero-form .btn-submit,
+  .inner-hero-form .btn-submit,
+  .light-hero-form .btn-submit {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+
+  .hero-form h3,
+  .inner-hero-form h3 {
+    font-size: 17px;
+  }
+}
+
 /* ======= LIGHT FORM (used on white backgrounds) ======= */
 .light-hero-form {
   background: #f8f9fa;
