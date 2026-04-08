@@ -3,26 +3,32 @@ import Image from "next/image";
 import HeroForm from "@/components/HeroForm";
 import { PHONE, WHATSAPP } from "@/lib/data";
 
-const SERVICES_CARDS = [
-  { icon: "🔧", name: "AC Repair", desc: "Fast diagnosis and repair for all types of ACs — split, window, cassette, inverter. All brands covered.", price: "Starting ₹299" },
-  { icon: "🧹", name: "AC Servicing", desc: "Complete cleaning of filters, coils, fins, drain pan. Improves efficiency and extends AC lifespan.", price: "Starting ₹499" },
-  { icon: "🔩", name: "AC Installation", desc: "Professional split AC installation with copper pipe fitting, electrical work & demo. Same-day available.", price: "Starting ₹999" },
-  { icon: "💧", name: "Gas Filling / Recharge", desc: "AC gas recharge with R22, R32, R410A refrigerant. Leak testing included. Instant cooling restored.", price: "Starting ₹1,499" },
-  { icon: "📋", name: "AMC Plans", desc: "Annual Maintenance Contracts for hassle-free AC upkeep. Quarterly visits, priority service, discounts.", price: "Starting ₹2,999/year" },
-  { icon: "🏢", name: "Commercial AC Service", desc: "Office, retail, and industrial AC maintenance. Centralized AC, duct AC, VRF/VRV systems handled.", price: "Custom Pricing" },
-  { icon: "🔄", name: "AC Shifting & Relocation", desc: "Safe uninstallation and reinstallation when you move home. Proper gas recovery and refilling included.", price: "Starting ₹1,499" },
-  { icon: "🧪", name: "AC Deep Cleaning", desc: "Jet wash, chemical coil cleaning, sanitization. Kills bacteria and mold. Improves air quality.", price: "Starting ₹799" },
+const AC_SERVICES = [
+  { icon: "🔧", name: "AC Repair", desc: "Fast diagnosis and repair for all types of ACs — split, window, cassette, inverter. All brands covered." },
+  { icon: "🧹", name: "AC Servicing", desc: "Complete cleaning of filters, coils, fins, drain pan. Improves efficiency and extends AC lifespan." },
+  { icon: "🔩", name: "AC Installation", desc: "Professional split AC installation with copper pipe fitting, electrical work & demo. Same-day available." },
+  { icon: "💧", name: "Gas Filling / Recharge", desc: "AC gas recharge with R22, R32, R410A refrigerant. Leak testing included. Instant cooling restored." },
+  { icon: "📋", name: "AMC Plans", desc: "Annual Maintenance Contracts for hassle-free AC upkeep. Quarterly visits, priority service, discounts." },
+  { icon: "🏢", name: "Commercial AC Service", desc: "Office, retail, and industrial AC maintenance. Centralized AC, duct AC, VRF/VRV systems handled." },
+  { icon: "🔄", name: "AC Shifting & Relocation", desc: "Safe uninstallation and reinstallation when you move home. Proper gas recovery and refilling included." },
+  { icon: "🧪", name: "AC Deep Cleaning", desc: "Jet wash, chemical coil cleaning, sanitization. Kills bacteria and mold. Improves air quality." },
+];
+
+const OTHER_SERVICES = [
+  { icon: "❄️", name: "Refrigeration", desc: "Fridge repair, deep freezer service, and commercial refrigeration maintenance for all brands." },
+  { icon: "👕", name: "Washing Machine", desc: "Washing machine repair, installation & servicing. Front load, top load, semi-automatic — all brands." },
+  { icon: "🍽️", name: "Microwave", desc: "Microwave oven repair and servicing. Convection, grill, solo — all types and brands covered." },
+  { icon: "📺", name: "LED TV", desc: "LED TV repair, screen issues, motherboard repair, sound problems. All brands and screen sizes." },
+  { icon: "💧", name: "Water Purifier", desc: "Water purifier installation, servicing & repair. RO, UV, UF — all types and brands covered." },
 ];
 
 const WHY_US = [
   { icon: "⚡", title: "Same Day Service", desc: "Book by 12 PM and get service the same day. We know how critical AC is in Bangalore heat." },
   { icon: "🏆", title: "Certified Technicians", desc: "All our technicians are trained, certified and background verified for your safety." },
   { icon: "💯", title: "Genuine Spare Parts", desc: "We use only original OEM parts with warranty. No fake components that damage your AC." },
-  { icon: "💰", title: "Transparent Pricing", desc: "No hidden charges. Get a full cost estimate before work begins. Pay only what's quoted." },
   { icon: "🛡️", title: "Service Warranty", desc: "30-day warranty on all repair work. 1-year warranty on parts replaced. Peace of mind guaranteed." },
   { icon: "📍", title: "All Bangalore Areas", desc: "50+ areas covered. Technicians stationed across Bangalore for fastest response time." },
   { icon: "🔧", title: "All Brands Serviced", desc: "LG, Samsung, Daikin, Voltas, Carrier, Blue Star, Hitachi, Panasonic, O General & more." },
-  { icon: "📞", title: "24/7 Support", desc: "Round-the-clock customer support. Reach us by phone, WhatsApp, or online chat anytime." },
 ];
 
 const BRANDS = ["❄️ Daikin","🌀 LG","📱 Samsung","🔵 Blue Star","🔴 Carrier","🔶 Voltas","⚡ Hitachi","🌿 Panasonic","🏠 Whirlpool","💚 Godrej","🦁 Lloyd","🌊 Haier","🌸 O General","⭐ Mitsubishi","🔥 Fujitsu","🌐 Toshiba","🔩 Onida","🎯 IFB"];
@@ -61,12 +67,12 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="hero-badge">⭐ Bangalore&apos;s #1 Rated AC Service</div>
-            <h1>Expert <span>AC Repair &amp;</span><br />Service in Bangalore</h1>
-            <p>Same-day service, certified technicians, genuine spare parts. All brands. All areas. Guaranteed satisfaction.</p>
+            <div className="hero-badge">🚀 BANGALORE&apos;S #1 APPLIANCE REPAIR</div>
+            <h1>Expert Repair Service<br />At Your <span>Doorstep</span></h1>
+            <p>Fast, reliable &amp; affordable repair for AC, Fridge, Washing Machine, Microwave &amp; Water Purifier. <strong>90 Mins Arrival Time.</strong></p>
             <div className="hero-btns">
-              <a href={`tel:${PHONE.replace(/[^+\d]/g,"")}`} className="btn btn-primary">📞 Call Now – Free Inspection</a>
-              <Link href="/contact" className="btn btn-outline">📅 Book Online</Link>
+              <a href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi, I need a service booking")}`} className="btn btn-primary">💬 BOOK SERVICE NOW</a>
+              <a href={`tel:${PHONE.replace(/[^+\d]/g,"")}`} className="btn btn-outline">📞 Call: {PHONE}</a>
             </div>
             <div className="hero-stats">
               <div className="stat-item"><div className="num">15,000+</div><div className="label">Happy Customers</div></div>
@@ -83,16 +89,36 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">OUR SERVICES</div>
-            <h2>Complete AC Solutions in Bangalore</h2>
+            <h2>AC Services — Our Speciality</h2>
             <p>From repair to installation, we handle everything with certified professionals and genuine parts.</p>
           </div>
           <div className="services-grid">
-            {SERVICES_CARDS.map((s) => (
+            {AC_SERVICES.map((s) => (
               <div className="service-card" key={s.name}>
                 <span className="service-icon">{s.icon}</span>
                 <h3>{s.name}</h3>
                 <p>{s.desc}</p>
-                <div className="price">{s.price}</div>
+                <a href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Hi, I need ${s.name} service`)}`} className="btn btn-primary" style={{marginTop:"12px",width:"100%",justifyContent:"center",fontSize:"13px",padding:"10px 20px"}}>💬 WhatsApp Us</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="why-bg">
+        <div className="container">
+          <div className="section-header">
+            <div className="section-tag">MORE SERVICES</div>
+            <h2>Other Appliance Services</h2>
+            <p>We also repair and service all major home appliances.</p>
+          </div>
+          <div className="services-grid">
+            {OTHER_SERVICES.map((s) => (
+              <div className="service-card" key={s.name}>
+                <span className="service-icon">{s.icon}</span>
+                <h3>{s.name}</h3>
+                <p>{s.desc}</p>
+                <a href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Hi, I need ${s.name} service`)}`} className="btn btn-primary" style={{marginTop:"12px",width:"100%",justifyContent:"center",fontSize:"13px",padding:"10px 20px"}}>💬 WhatsApp Us</a>
               </div>
             ))}
           </div>

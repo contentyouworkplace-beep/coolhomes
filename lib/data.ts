@@ -13,6 +13,11 @@ export const SERVICES = [
   "AMC Plan",
   "AC Shifting",
   "Emergency Repair",
+  "Refrigeration",
+  "Washing Machine",
+  "Microwave",
+  "LED TV",
+  "Water Purifier",
 ];
 
 export const KEYWORDS: Record<string, { title: string; description: string }> = {

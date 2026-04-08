@@ -25,7 +25,7 @@ export default function ClientScripts() {
     const scrollBtn = document.createElement("button");
     scrollBtn.id = "scroll-top";
     scrollBtn.innerHTML = "▲";
-    scrollBtn.style.cssText = "position:fixed;bottom:20px;right:20px;background:#0070f3;color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:18px;cursor:pointer;display:none;z-index:999;";
+    scrollBtn.style.cssText = "position:fixed;bottom:90px;right:20px;background:#1a8a5c;color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:18px;cursor:pointer;display:none;z-index:999;";
     document.body.appendChild(scrollBtn);
 
     window.addEventListener("scroll", () => {

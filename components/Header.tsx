@@ -21,14 +21,18 @@ export default function Header() {
       </div>
       <div className="header-main">
         <Link href="/" className="logo">
-          <Image
-            src="/coolhomes-logo.png"
-            alt="Cool Home Services Logo"
-            width={160}
-            height={52}
-            priority
-            style={{ objectFit: "contain" }}
-          />
+          <div>
+            <Image
+              src="/coolhomes-logo.png"
+              alt="Cool Home Services Logo"
+              width={160}
+              height={52}
+              priority
+              style={{ objectFit: "contain" }}
+            />
+            <div style={{ fontSize: "10px", color: "#1a8a5c", fontWeight: 700, letterSpacing: "0.5px", marginTop: "2px" }}>Authorised Service Provider</div>
+            <div style={{ fontSize: "9px", color: "#888", marginTop: "1px" }}>GST: 29CGJPP2555C1Z9</div>
+          </div>
         </Link>
         <nav>
           <ul>

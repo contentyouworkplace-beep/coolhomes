@@ -20,8 +20,12 @@ export default function Footer() {
             />
           </Link>
           <p>
-            Bangalore&apos;s most trusted AC repair and service company. Certified
-            technicians, genuine parts, transparent pricing. Since 2014.
+            Bangalore&apos;s most trusted appliance repair and service company. Certified
+            technicians, genuine parts, all brands covered. Since 2014.
+          </p>
+          <p style={{ fontSize: "11px", color: "#666", marginTop: "8px" }}>
+            Authorised Service Provider<br />
+            GST: 29CGJPP2555C1Z9
           </p>
         </div>
         <div className="footer-col">
