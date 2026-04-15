@@ -4,8 +4,8 @@ import HeroForm from "@/components/HeroForm";
 import { PHONE, WHATSAPP } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "About Cool Home Services | AC Repair Experts in Bangalore",
-  description: "Cool Home Services is Bangalore's most trusted AC repair company since 2014. 10+ years experience, 15,000+ happy customers, 50+ areas covered.",
+  title: "About Cool Homes Services | AC Repair Experts in Bangalore",
+  description: "Cool Homes Services is Bangalore's most trusted AC repair company since 2014. 10+ years experience, 15,000+ happy customers, 50+ areas covered.",
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div className="container">
           <div>
             <div className="breadcrumb"><Link href="/">Home</Link> &rsaquo; About Us</div>
-            <h1>About Cool Home Services</h1>
+            <h1>About Cool Homes Services</h1>
             <p>Bangalore&apos;s most trusted AC repair and service company since 2014. Over 10 years of delivering quality AC solutions.</p>
           </div>
           <HeroForm variant="inner" />
@@ -27,7 +27,7 @@ export default function AboutPage() {
           <div className="content-two-col">
             <div className="content-text">
               <h2>Who We Are</h2>
-              <p>Cool Home Services is Bangalore&apos;s leading AC repair, installation, and maintenance company. Founded in 2014, we have served over 15,000 happy customers across 50+ areas in Bangalore.</p>
+              <p>Cool Homes Services is Bangalore&apos;s leading AC repair, installation, and maintenance company. Founded in 2014, we have served over 15,000 happy customers across 50+ areas in Bangalore.</p>
               <p>Our team of certified technicians are trained to handle all major AC brands including LG, Samsung, Daikin, Voltas, Carrier, Blue Star, Hitachi, Panasonic, and more.</p>
               <p>We believe in transparency, quality, and customer satisfaction. Every job comes with a service warranty and we never charge hidden fees.</p>
               <div className="hero-stats" style={{marginTop:"30px"}}>

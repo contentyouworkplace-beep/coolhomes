@@ -4,8 +4,8 @@ import HeroForm from "@/components/HeroForm";
 import { PHONE, WHATSAPP, EMAIL } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Contact Cool Home Services | Book AC Service in Bangalore",
-  description: "Contact Cool Home Services to book AC repair, installation or servicing in Bangalore. Call +91-9876543210 or fill our online form for a free callback.",
+  title: "Contact Cool Homes Services | Book AC Service in Bangalore",
+  description: "Contact Cool Homes Services to book AC repair, installation or servicing in Bangalore. Call +91-9876543210 or fill our online form for a free callback.",
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
         <div className="container">
           <div>
             <div className="breadcrumb"><Link href="/">Home</Link> &rsaquo; Contact</div>
-            <h1>Contact Cool Home Services</h1>
+            <h1>Contact Cool Homes Services</h1>
             <p>Book AC repair, installation or servicing in Bangalore. We respond within 30 minutes.</p>
           </div>
           <HeroForm variant="inner" />

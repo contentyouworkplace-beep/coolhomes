@@ -21,19 +21,19 @@ export async function generateMetadata({
   if (!kw) return {};
   const url = `https://www.coolhomesservices.com/keywords/${slug}`;
   return {
-    title: `${kw.title} | Cool Home Services`,
+    title: `${kw.title} | Cool Homes Services`,
     description: kw.description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${kw.title} | Cool Home Services`,
+      title: `${kw.title} | Cool Homes Services`,
       description: kw.description,
       url,
       type: "website",
-      siteName: "Cool Home Services",
+      siteName: "Cool Homes Services",
     },
     twitter: {
       card: "summary",
-      title: `${kw.title} | Cool Home Services`,
+      title: `${kw.title} | Cool Homes Services`,
       description: kw.description,
     },
   };
@@ -68,7 +68,7 @@ export default async function KeywordPage({
           { name: title, url: `https://www.coolhomesservices.com/keywords/${slug}` },
         ]}
         pageUrl={`https://www.coolhomesservices.com/keywords/${slug}`}
-        pageTitle={`${title} | Cool Home Services`}
+        pageTitle={`${title} | Cool Homes Services`}
         pageDescription={kw.description}
       />
       <section className="inner-hero">
@@ -88,7 +88,7 @@ export default async function KeywordPage({
             <div className="content-text">
               <h2>{title} – <span>Expert Service You Can Trust</span></h2>
               <p>
-                Are you looking for <strong>{title}</strong>? Cool Home Services is Bangalore&apos;s most trusted
+                Are you looking for <strong>{title}</strong>? Cool Homes Services is Bangalore&apos;s most trusted
                 AC service provider with over 10 years of experience. Our certified technicians deliver
                 top-quality results at your doorstep.
               </p>
@@ -130,7 +130,7 @@ export default async function KeywordPage({
 
       <section className="content-section alt-bg">
         <div className="container">
-          <div className="section-header"><h2>Why Choose Cool Home Services for {title}?</h2></div>
+          <div className="section-header"><h2>Why Choose Cool Homes Services for {title}?</h2></div>
           <div className="why-grid">
             <div className="why-card"><div className="icon">⚡</div><h3>Fast Response</h3><p>Technicians dispatched within 30 minutes. Same-day service available across Bangalore.</p></div>
             <div className="why-card"><div className="icon">🏆</div><h3>Certified Experts</h3><p>All technicians are certified with 5+ years of hands-on AC service experience.</p></div>

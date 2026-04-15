@@ -4,8 +4,8 @@ import HeroForm from "@/components/HeroForm";
 import { PHONE, WHATSAPP, AREAS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "AC Service Areas in Bangalore | Cool Home Services",
-  description: "Cool Home Services covers 50+ areas in Bangalore for AC repair, installation and servicing. Find your area and book same-day service.",
+  title: "AC Service Areas in Bangalore | Cool Homes Services",
+  description: "Cool Homes Services covers 50+ areas in Bangalore for AC repair, installation and servicing. Find your area and book same-day service.",
 };
 
 export default function AreasPage() {

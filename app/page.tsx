@@ -34,7 +34,7 @@ const WHY_US = [
 const BRANDS = ["❄️ Daikin","🌀 LG","📱 Samsung","🔵 Blue Star","🔴 Carrier","🔶 Voltas","⚡ Hitachi","🌿 Panasonic","🏠 Whirlpool","💚 Godrej","🦁 Lloyd","🌊 Haier","🌸 O General","⭐ Mitsubishi","🔥 Fujitsu","🌐 Toshiba","🔩 Onida","🎯 IFB"];
 
 const TESTIMONIALS = [
-  { text: "My AC stopped working on the hottest day in May. Cool Home Services sent a technician within 2 hours. The repair was done quickly and the pricing was very fair. Highly recommend!", name: "Rahul Sharma", loc: "Koramangala, Bangalore", avatar: "R" },
+  { text: "My AC stopped working on the hottest day in May. Cool Homes Services sent a technician within 2 hours. The repair was done quickly and the pricing was very fair. Highly recommend!", name: "Rahul Sharma", loc: "Koramangala, Bangalore", avatar: "R" },
   { text: "Excellent service! I got an AMC plan for 2 ACs and the team comes on schedule every quarter. My electricity bills have also reduced after proper servicing. Great company.", name: "Priya Menon", loc: "Indiranagar, Bangalore", avatar: "P" },
   { text: "Very professional technicians. They explained what was wrong with my Daikin AC and showed me the damaged part before replacing it. Transparent and trustworthy service.", name: "Arjun Nair", loc: "Whitefield, Bangalore", avatar: "A" },
 ];
@@ -129,7 +129,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">WHY CHOOSE US</div>
-            <h2>Why Thousands Trust Cool Home Services</h2>
+            <h2>Why Thousands Trust Cool Homes Services</h2>
           </div>
           <div className="why-grid">
             {WHY_US.map((w) => (
@@ -206,7 +206,7 @@ export default function HomePage() {
               <div key={i} className="gallery-item">
                 <Image
                   src={`/gallery/${img}`}
-                  alt={`Cool Home Services AC work ${i + 1}`}
+                  alt={`Cool Homes Services AC work ${i + 1}`}
                   width={400}
                   height={300}
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}

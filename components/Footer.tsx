@@ -13,7 +13,7 @@ export default function Footer() {
           <Link href="/" className="logo">
             <Image
               src="/coolhomes-logo.png"
-              alt="Cool Home Services Logo"
+              alt="Cool Homes Services Logo"
               width={160}
               height={52}
               style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }}
@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2026 Cool Home Services. All Rights Reserved. Bangalore, Karnataka</p>
+        <p>&copy; 2026 Cool Homes Services. All Rights Reserved. Bangalore, Karnataka</p>
       </div>
     </footer>
   );

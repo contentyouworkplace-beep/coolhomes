@@ -7,12 +7,12 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cool Home Services - #1 AC Repair & Service in Bangalore | Call Now",
+  title: "Cool Homes Services - #1 AC Repair & Service in Bangalore | Call Now",
   description:
-    "Cool Home Services provides expert AC repair, installation, and maintenance in Bangalore. Certified technicians, same-day service, all brands. Call +91-9876543210.",
+    "Cool Homes Services provides expert AC repair, installation, and maintenance in Bangalore. Certified technicians, same-day service, all brands. Call +91-9876543210.",
   metadataBase: new URL("https://www.coolhomesservices.com"),
   openGraph: {
-    siteName: "Cool Home Services",
+    siteName: "Cool Homes Services",
     type: "website",
     locale: "en_IN",
   },

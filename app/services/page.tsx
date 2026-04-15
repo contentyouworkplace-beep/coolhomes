@@ -4,7 +4,7 @@ import HeroForm from "@/components/HeroForm";
 import { PHONE, WHATSAPP } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "AC Repair & Services in Bangalore | Cool Home Services",
+  title: "AC Repair & Services in Bangalore | Cool Homes Services",
   description: "Complete AC repair, installation, servicing, gas filling, deep cleaning and AMC plans in Bangalore. Certified technicians, all brands, same-day service.",
 };
 

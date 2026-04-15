@@ -21,19 +21,19 @@ export async function generateMetadata({
   if (!area) return {};
   const url = `https://www.coolhomesservices.com/areas/${slug}`;
   return {
-    title: `AC Repair in ${area.name}, Bangalore | Cool Home Services`,
+    title: `AC Repair in ${area.name}, Bangalore | Cool Homes Services`,
     description: area.description,
     alternates: { canonical: url },
     openGraph: {
-      title: `AC Repair in ${area.name}, Bangalore | Cool Home Services`,
+      title: `AC Repair in ${area.name}, Bangalore | Cool Homes Services`,
       description: area.description,
       url,
       type: "website",
-      siteName: "Cool Home Services",
+      siteName: "Cool Homes Services",
     },
     twitter: {
       card: "summary",
-      title: `AC Repair in ${area.name}, Bangalore | Cool Home Services`,
+      title: `AC Repair in ${area.name}, Bangalore | Cool Homes Services`,
       description: area.description,
     },
   };
@@ -67,7 +67,7 @@ export default async function AreaPage({
           { name: `AC Repair in ${name}`, url: `https://www.coolhomesservices.com/areas/${slug}` },
         ]}
         pageUrl={`https://www.coolhomesservices.com/areas/${slug}`}
-        pageTitle={`AC Repair in ${name}, Bangalore | Cool Home Services`}
+        pageTitle={`AC Repair in ${name}, Bangalore | Cool Homes Services`}
         pageDescription={area.description}
       />
       <section className="inner-hero">
@@ -89,7 +89,7 @@ export default async function AreaPage({
             <div className="content-text">
               <h2>AC Repair &amp; Service in <span>{name}</span></h2>
               <p>
-                Cool Home Services provides expert AC repair, servicing, installation, and maintenance in{" "}
+                Cool Homes Services provides expert AC repair, servicing, installation, and maintenance in{" "}
                 <strong>{name}, Bangalore</strong>. Our experienced technicians are stationed near {name}{" "}
                 to ensure fast response times.
               </p>
