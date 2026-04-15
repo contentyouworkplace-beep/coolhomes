@@ -41,10 +41,10 @@ export default function SchemaMarkup({
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Koramangala",
-      addressLocality: "Bangalore",
+      streetAddress: "4th T Block East, 2nd Phase, Jayanagar",
+      addressLocality: "Bengaluru",
       addressRegion: "Karnataka",
-      postalCode: "560034",
+      postalCode: "560041",
       addressCountry: "IN",
     },
     geo: {

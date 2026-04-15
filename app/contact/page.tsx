@@ -41,7 +41,7 @@ export default function ContactPage() {
               </div>
               <div className="contact-item">
                 <div className="contact-icon">📍</div>
-                <div><h4>OFFICE</h4><p>Koramangala, Bangalore – 560034</p></div>
+                <div><h4>OFFICE</h4><p>4th T Block East, 2nd Phase, Jayanagar, Bengaluru, Karnataka 560041</p></div>
               </div>
               <div className="contact-item">
                 <div className="contact-icon">🕐</div>
