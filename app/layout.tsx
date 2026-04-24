@@ -12,9 +12,14 @@ export const metadata: Metadata = {
     "Cool Homes Services provides expert AC repair, installation, and maintenance in Bangalore. Certified technicians, same-day service, all brands. Call +91-9611133359.",
   metadataBase: new URL("https://www.coolhomesservices.com"),
   icons: {
-    icon: "/siteicon.png",
-    shortcut: "/siteicon.png",
-    apple: "/siteicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/siteicon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
   openGraph: {
     siteName: "Cool Homes Services",

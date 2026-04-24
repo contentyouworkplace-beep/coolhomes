@@ -26,8 +26,8 @@ export default function SchemaMarkup({
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
-    image: `${SITE_URL}/icon.svg`,
-    logo: `${SITE_URL}/icon.svg`,
+    image: `${SITE_URL}/siteicon.svg`,
+    logo: `${SITE_URL}/siteicon.svg`,
     description:
       "Bangalore's most trusted AC repair and service company. Certified technicians, genuine parts, same-day service. All brands covered.",
     priceRange: "₹₹",
